@@ -6,11 +6,13 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ThemeToggle from "@/components/ThemeToggle";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Header />
+      <AnnouncementBanner />
       <HeroSection />
       <AboutSection />
       <ServicesSection />

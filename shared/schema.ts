@@ -41,3 +41,21 @@ export const insertContactMessageSchema = createInsertSchema(contactMessages).om
 
 export type InsertContactMessage = z.infer<typeof insertContactMessageSchema>;
 export type ContactMessage = typeof contactMessages.$inferSelect;
+
+export const siteFeatures = pgTable("site_features", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull().unique(),
+  title: text("title").notNull(),
+  description: text("description"),
+  isEnabled: boolean("is_enabled").default(true).notNull(),
+  content: text("content"),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const insertSiteFeatureSchema = createInsertSchema(siteFeatures).omit({
+  id: true,
+  updatedAt: true,
+});
+
+export type InsertSiteFeature = z.infer<typeof insertSiteFeatureSchema>;
+export type SiteFeature = typeof siteFeatures.$inferSelect;
