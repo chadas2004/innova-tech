@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logoImage from "@assets/generated_images/Africa_Infotech_Innovation_logo_d714841a.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,12 +18,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/attached_assets/télécharger_1760454303431.jpeg" 
+                src={logoImage} 
                 alt="Africa Infotech Innovation" 
-                className="h-10 w-10 object-contain rounded-md"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect fill='%23006db3' width='40' height='40' rx='5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E";
-                }}
+                className="h-10 w-10 object-contain"
               />
               <span className="font-display font-bold text-foreground">
                 Africa Infotech

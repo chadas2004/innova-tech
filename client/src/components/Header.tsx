@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
+import logoImage from "@assets/generated_images/Africa_Infotech_Innovation_logo_d714841a.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,12 +35,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
             <img 
-              src="/attached_assets/télécharger_1760454303431.jpeg" 
+              src={logoImage} 
               alt="Africa Infotech Innovation" 
-              className="h-12 w-12 object-contain rounded-md"
-              onError={(e) => {
-                e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect fill='%23006db3' width='48' height='48' rx='6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='20' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E";
-              }}
+              className="h-12 w-12 object-contain"
             />
             <span className="text-xl font-display font-bold text-foreground">
               Africa Infotech Innovation

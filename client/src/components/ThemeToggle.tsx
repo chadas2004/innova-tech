@@ -23,11 +23,11 @@ export default function ThemeToggle() {
 
   return (
     <Button
-      variant="ghost"
+      variant="outline"
       size="icon"
       onClick={toggleTheme}
       data-testid="button-theme-toggle"
-      className="fixed top-24 right-6 z-40"
+      className="fixed top-24 right-6 z-40 bg-background shadow-md"
     >
       {theme === "light" ? (
         <Moon className="w-5 h-5" />
